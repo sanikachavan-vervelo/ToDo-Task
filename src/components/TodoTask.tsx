@@ -17,9 +17,11 @@ const TodoTask = ({ task, completeTask }: Props) => {
     <div>
       {task?.taskName} | {task?.deadline}
 
-      <button onClick={complete1}>
-        {isCompleted ? "Completed" : "Complete"}
-      </button>
+    <button onClick={complete1} style={{ backgroundColor: isCompleted ? 'hotpink' : 'white', color: isCompleted ? 'white' : 'black',
+  }}
+>
+  {isCompleted ? "Completed" : "Complete"}
+</button>
 
       <button
         onClick={() => {

@@ -27,7 +27,7 @@ const App: FC = () => {
 
  const completeTask = (taskNameToDelete:string):void => {
     settodo(todo.filter((task) =>{
-     return task.taskName != taskNameToDelete
+     return task.taskName !== taskNameToDelete
      } 
   ))
  }
@@ -35,8 +35,8 @@ const App: FC = () => {
   return (
     <div className='App'>
       <div className="header">
-        <input type="text" placeholder='add task' name='task' value={task} onChange={handleChange}/>
-        <input type="number" placeholder='Date To complete task' name='deadline' value={deadline} onChange={handleChange} />
+        <input className='input1' type="text" placeholder='add task' name='task' value={task} onChange={handleChange} required/>
+        <input className='input1' type="number" placeholder='Date To complete task' name='deadline' value={deadline} onChange={handleChange} />
         <button onClick={addTask}>Add</button>
       </div>
       <div className="todolist">
